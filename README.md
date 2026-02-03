@@ -26,7 +26,7 @@ Before running the application, ensure you have Python 3.x installed. You will a
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/yusufadepoju1/pdf_reader.git
 cd your-repo-name
 
 ```
@@ -40,7 +40,7 @@ pip install flask pdfplumber pandas
 
 
 3. **Project Structure:**
-Ensure your directory looks like this:
+
 ```text
 .
 ├── app.py              # The Python code provided
