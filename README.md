@@ -1,78 +1,41 @@
+# PDF to CSV Converter QA Portfolio
 
-# PDF to CSV Converter
+## Project Overview
 
-A lightweight web application built with **Python** and **Flask** that allows users to upload a PDF file, extract its tabular or textual data, and download the results as a structured **CSV file**.
+This repository contains Quality Assurance documentation for testing a Flask-based PDF to CSV Converter application.
 
-## Features
+The application allows users to upload PDF files, extracts tables or text from the document, converts the extracted content into CSV format, and provides the CSV file for download.
 
-* **Table Extraction:** Automatically identifies and extracts tables from PDF pages using `pdfplumber`.
-* **Fallback Text Extraction:** If no tables are found, it extracts raw text line-by-line to ensure no data is lost.
-* **Clean Web Interface:** Simple upload/download flow.
-* **Secure File Handling:** Uses `werkzeug` to sanitize filenames and manage uploads safely.
+## Testing Scope
 
----
+The following areas were tested:
 
-## Prerequisites
+- Homepage
+- File Upload
+- PDF Validation
+- Text Extraction
+- Table Extraction
+- CSV Generation
+- CSV Download
+- Error Handling
 
-Before running the application, ensure you have Python 3.x installed. You will also need the following libraries:
+## Testing Types
 
-* **Flask:** The web framework.
-* **pdfplumber:** For advanced PDF data extraction.
-* **pandas:** For data structuring and CSV generation.
+- Functional Testing
+- UI Testing
+- Regression Testing
+- Negative Testing
+- Boundary Testing
+- Compatibility Testing
 
----
+## Tools Used
 
-##  Installation & Setup
+- Manual Testing
+- Python
+- Flask
+- Postman
+- Playwright (Planned)
 
-1. **Clone the repository:**
-```bash
-git clone https://github.com/yusufadepoju1/pdf_reader.git
-cd your-repo-name
+## Author
 
-```
-
-
-2. **Install dependencies:**
-```bash
-pip install flask pdfplumber pandas
-
-```
-
-
-3. **Project Structure:**
-
-```text
-.
-├── app.py              # The Python code provided
-├── uploads/            # Created automatically to store files
-└── templates/
-    └── index.html      # Your HTML upload form
-
-```
-
-
-4. **Run the application:**
-```bash
-python app.py
-
-```
-
-
-The app will be available at `http://127.0.0.1:5000`.
-Live link: https://pdfreaderapp.duckdns.org/
-
----
-
-## How It Works
-
-1. **Upload:** The user selects a `.pdf` file via the web interface.
-2. **Processing:** * The app saves the file to the `/uploads` folder.
-* `pdfplumber` iterates through each page.
-* It prioritizes `extract_tables()`. If a table exists, it preserves the row/column structure.
-* If no table is detected, it falls back to `extract_text()`.
-
-
-3. **Export:** The data is converted into a Pandas DataFrame and saved as a `.csv`.
-4. **Download:** The browser automatically prompts the user to download the generated CSV file.
-
----
+Adepoju Yusuf
