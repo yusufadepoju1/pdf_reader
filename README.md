@@ -1,4 +1,4 @@
-# PDF to CSV Converter QA Portfolio
+# PDF to CSV Converter 
 
 ## Project Overview
 
